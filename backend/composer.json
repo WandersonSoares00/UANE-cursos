@@ -1,0 +1,7 @@
+{
+    "name": "opovo/backend",
+    "description": "API dos cursos da UANE.",
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
