@@ -19,13 +19,13 @@ Este projeto é uma Landing Page responsiva para a UANE.
 3.  Crie o arquivo .env com as credenciais necessárias (use o arquivo env.example como modelo)
 4.  Execute o comando para construir e iniciar todos os containers:
     ```bash
-    docker-compose up --build
+    docker compose up --build
     ```
 5.  Aguarde o processo de build e inicialização dos serviços.
 6.  Pronto! A aplicação estará disponível em:
     * **Frontend (Landing Page):** [http://localhost:3000](http://localhost:3000)
 
-Para parar a aplicação, pressione `CTRL + C` no terminal e depois execute `docker-compose down`.
+Para parar a aplicação, pressione `CTRL + C` no terminal e depois execute `docker compose down`.
 
 ---
 ## Stack Utilizada
