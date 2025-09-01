@@ -11,45 +11,70 @@ CREATE TABLE IF NOT EXISTS cursos (
     nome VARCHAR(255) NOT NULL,
     descricao TEXT NOT NULL,
     imagem VARCHAR(255) NOT NULL,
-    categoria ENUM('Técnico', 'Extensão', 'Livre', 'Curta Duração') NOT NULL,
+    categoria ENUM('Tecnico', 'Extensao', 'Livre', 'Curta Duracao') NOT NULL,
     carga_horaria INT NOT NULL,
-    modalidade ENUM('Presencial', 'EAD', 'Híbrido') NOT NULL,
+    modalidade ENUM('Presencial', 'EAD', 'Hibrido') NOT NULL,
     area_id INT NOT NULL,
     FOREIGN KEY (area_id) REFERENCES areas(id)
 );
 
 INSERT INTO areas (nome) VALUES
 ('Bem-viver'),
-('Tecnologia e Profissão'),
-('Negócios');
+('Tecnologia e Profissao'),
+('Negocios');
 
 INSERT INTO cursos (nome, descricao, imagem, categoria, carga_horaria, modalidade, area_id) VALUES
 ('Design Digital',
- 'Explore a criação de interfaces, experiência do usuário (UX/UI) e comunicação visual.',
+ 'Explore a criacao de interfaces, experiencia do usuario (UX/UI) e comunicacao visual.',
  'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e',
- 'Extensão', 60, 'EAD', 2),
+ 'Extensao', 60, 'EAD', 2),
 
-('Educação Ambiental para um Presente Sustentável',
- 'Curso de extensão gratuito e totalmente online, com 72 horas/aula, voltado para jovens e adultos interessados em compreender e agir diante dos desafios ambientais. Oferece videoaulas, podcasts, materiais de apoio e certificação pela Fundação Demócrito Rocha e pela Universidade Estadual do Ceará.',
+('Educacao Ambiental para um Presente Sustentavel',
+ 'Curso de extensao gratuito e totalmente online, com 72 horas/aula, voltado para jovens e adultos interessados em compreender e agir diante dos desafios ambientais. Oferece videoaulas, podcasts, materiais de apoio e certificacao pela Fundacao Democrito Rocha e pela Universidade Estadual do Ceara.',
  'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
- 'Extensão', 72, 'EAD', 1),
+ 'Extensao', 72, 'EAD', 1),
 
 ('Bullying: conhecer para combater',
- 'Curso gratuito da UECE e FDR para capacitar educadores, pais e estudantes a identificar, prevenir e combater o bullying no ambiente escolar. Totalmente online, com 60 horas de carga horária.',
+ 'Curso gratuito da UECE e FDR para capacitar educadores, pais e estudantes a identificar, prevenir e combater o bullying no ambiente escolar. Totalmente online, com 60 horas de carga horaria.',
  'https://images.unsplash.com/photo-1529070538774-1843cb3265df',
- 'Extensão', 60, 'EAD', 1),
+ 'Extensao', 60, 'EAD', 1),
 
 ('Secretaria Escolar',
- 'Capacitação para profissionais da área administrativa escolar. Curso online, 60 horas, com conteúdos sobre gestão de documentos, atendimento ao público e organização de arquivos.',
+ 'Capacitacao para profissionais da area administrativa escolar. Curso online, 60 horas, com conteudos sobre gestao de documentos, atendimento ao publico e organizacao de arquivos.',
  'https://images.unsplash.com/photo-1519389950473-47ba0277781c',
- 'Extensão', 60, 'EAD', 2),
+ 'Extensao', 60, 'EAD', 2),
 
-('Gestão Fiscal Interfederativa',
- 'Capacita profissionais da área pública e privada na gestão fiscal, abordando legislação tributária, planejamento e controle financeiro. Curso online, 60 horas.',
+('Gestao Fiscal Interfederativa',
+ 'Capacita profissionais da area publica e privada na gestao fiscal, abordando legislacao tributaria, planejamento e controle financeiro. Curso online, 60 horas.',
  'https://images.unsplash.com/photo-1556742044-3c52d6e88c62',
- 'Extensão', 60, 'EAD', 3),
+ 'Extensao', 60, 'EAD', 3),
 
 ('Marketing Digital',
- 'Curso para empreendedores e profissionais aprenderem estratégias de marketing digital: SEO, redes sociais, email marketing e mais. Online, 60 horas.',
+ 'Curso para empreendedores e profissionais aprenderem estrategias de marketing digital: SEO, redes sociais, email marketing e mais. Online, 60 horas.',
  'https://plus.unsplash.com/premium_photo-1684225764999-3597a8da10ab?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
- 'Extensão', 60, 'EAD', 3);
+ 'Extensao', 60, 'EAD', 3),
+
+('Gestao de Redes Sociais Corporativas',
+ 'Aprenda a gerenciar perfis corporativos em redes sociais e criar conteudo estrategico.',
+ 'https://images.unsplash.com/photo-1556740749-887f6717d7e4',
+ 'Extensao', 60, 'EAD', 2),
+
+('Seguranca Digital e Protecao de Dados',
+ 'Curso introdutorio sobre seguranca digital, boas praticas e protecao de informacoes pessoais e corporativas.',
+ 'https://unsplash.com/pt-br/fotografias/um-monitor-de-computador-sentado-em-cima-de-uma-mesa-UiW8V3djY8A',
+ 'Livre', 40, 'EAD', 2),
+
+('Produtividade e Ferramentas Digitais',
+ 'Aprenda a usar ferramentas de produtividade e organizacao no dia a dia profissional.',
+ 'https://images.unsplash.com/photo-1519389950473-47ba0277781c',
+ 'Livre', 35, 'Hibrido', 2),
+
+('Marketing Digital para Iniciantes',
+ 'Fundamentos de marketing digital, estrategias de conteudo e analise de metricas.',
+ 'https://unsplash.com/pt-br/fotografias/arte-de-marketing-digital-na-superficie-de-madeira-marrom-SB0WARG16HI',
+ 'Extensao', 50, 'EAD', 2),
+
+('Tecnologia no Bem-viver',
+ 'Como a tecnologia pode ser usada para melhorar a qualidade de vida e bem-estar pessoal.',
+ 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
+ 'Livre', 30, 'EAD', 2);
